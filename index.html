@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekend w Górach — Zapisy</title>
+  <meta name="description" content="Weekendowy wyjazd w góry — zapisy, plan, cena." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow"><!-- np. termin --> 17–19 października 2026</p>
+      <h1><!-- TYTUŁ WYJAZDU --> Weekend w Bieszczadach</h1>
+      <p class="subtitle">
+        <!-- krótki opis w 1-2 zdaniach -->
+        Trzy dni w górach: wschody słońca na połoninach, wspólne wieczory przy ognisku
+        i szlaki dla każdego poziomu kondycji.
+      </p>
+      <a href="#zapisy" class="btn btn-primary">Zapisz się</a>
+    </div>
+  </header>
+
+  <!-- O WYJEŹDZIE -->
+  <section class="section">
+    <h2>O wyjeździe</h2>
+    <p>
+      <!-- Tu wklej dłuższy opis: dla kogo jest wyjazd, jaki jest klimat grupy,
+           poziom trudności, co wyróżnia tę konkretną wyprawę. -->
+      Wyjazd jest dla wszystkich, którzy chcą oderwać się od miasta na weekend —
+      nie trzeba mieć górskiego doświadczenia, tempo dostosowujemy do grupy.
+      Nocujemy w przytulnym schronisku, jemy razem, a w drodze robimy tyle
+      przystanków na zdjęcia, ile trzeba.
+    </p>
+  </section>
+
+  <!-- PLAN WYJAZDU -->
+  <section class="section section-alt">
+    <h2>Plan wyjazdu</h2>
+    <div class="itinerary">
+      <div class="day-card">
+        <h3>Dzień 1 — Piątek</h3>
+        <p><!-- np. --> Wyjazd z miasta, zakwaterowanie, kolacja integracyjna i wieczór przy ognisku.</p>
+      </div>
+      <div class="day-card">
+        <h3>Dzień 2 — Sobota</h3>
+        <p><!-- np. --> Całodniowa wędrówka górskim szlakiem (ok. 12 km), obiad na trasie, wieczorem czas wolny.</p>
+      </div>
+      <div class="day-card">
+        <h3>Dzień 3 — Niedziela</h3>
+        <p><!-- np. --> Krótszy poranny spacer, śniadanie, powrót do miasta w godzinach popołudniowych.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CO W CENIE -->
+  <section class="section">
+    <h2>Co jest w cenie</h2>
+    <ul class="checklist">
+      <li>Nocleg (2 noce)</li>
+      <li>Transport tam i z powrotem</li>
+      <li>Wyżywienie wg planu</li>
+      <li>Opieka przewodnika na trasie</li>
+      <!-- dodaj / usuń pozycje wg potrzeby -->
+    </ul>
+  </section>
+
+  <!-- GALERIA (miejsce na zdjęcia z poprzednich wyjazdów) -->
+  <section class="section section-alt">
+    <h2>Zdjęcia z gór</h2>
+    <div class="gallery">
+      <!-- Podmień src na swoje zdjęcia, np. img/zdjecie1.jpg -->
+      <div class="gallery-item placeholder">zdjęcie 1</div>
+      <div class="gallery-item placeholder">zdjęcie 2</div>
+      <div class="gallery-item placeholder">zdjęcie 3</div>
+      <div class="gallery-item placeholder">zdjęcie 4</div>
+    </div>
+  </section>
+
+  <!-- CENA + ZAPISY -->
+  <section class="section pricing" id="zapisy">
+    <h2>Cena i zapisy</h2>
+    <div class="price-box">
+      <p class="price"><!-- CENA --> 590 zł <span>/ osoba</span></p>
+      <p class="price-note"><!-- ew. limit miejsc --> Liczba miejsc ograniczona do 12 osób.</p>
+
+      <div class="cta-group">
+        <a href="mailto:twoj@email.pl?subject=Zapis%20na%20wyjazd%20w%20g%C3%B3ry" class="btn btn-primary">
+          Napisz e-mail, żeby się zapisać
+        </a>
+        <a href="https://wa.me/48000000000" class="btn btn-secondary" target="_blank" rel="noopener">
+          Napisz na WhatsApp
+        </a>
+      </div>
+      <p class="hint">Podmień adres e-mail i numer WhatsApp na swoje w pliku index.html.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> — Weekend w górach</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
