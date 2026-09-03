@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pomysły na trasy — bushhike</title>
-<meta name="description" content="Wyszukiwarka tras górskich bushhike — wszystkie trasy z naszego Instagrama w jednym miejscu, z filtrem po paśmie i linkiem do nagrania.">
+<meta name="description" content="Wyszukiwarka tras górskich bushhike — wszystkie trasy z naszego Instagrama w jednym miejscu. Wkrótce.">
+<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://bushhike.pl/trasy/">
 <meta name="theme-color" content="#fcfcfb">
 <meta property="og:type" content="website">
@@ -18,7 +19,6 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://docs.google.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="/styles.css">
 <script src="/site.js" defer></script>
@@ -32,7 +32,7 @@
       <span class="site-nav-burger" aria-hidden="true"></span>
     </button>
     <div class="site-nav-links" id="site-nav-links">
-      <a href="/trasy/" aria-current="page">Trasy</a>
+      <a class="is-soon" aria-disabled="true" tabindex="-1">Trasy</a>
       <a href="/oferta/">Oferta</a>
       <a href="/wyjazdy/">Wyjazdy</a>
       <a href="/o-nas/">O nas</a>
@@ -42,55 +42,18 @@
 </div>
 
 <main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
-  <header style="max-width:44ch;padding:var(--space-8) 0 var(--space-6)">
-    <p class="kicker">Wyszukiwarka</p>
+  <header style="max-width:46ch;padding:var(--space-8) 0 var(--space-6)">
+    <p class="kicker">Wyszukiwarka <span class="soon-tag">wkrótce</span></p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Pomysły na trasy</h1>
-    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Wszystkie trasy, które pokazaliśmy na Instagramie, w jednym miejscu. Wpisz nazwę albo wybierz pasmo — karta zabierze Cię prosto do rolki.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Pracujemy nad wyszukiwarką, w której zbierzemy wszystkie trasy z naszego Instagrama — z filtrem po paśmie i linkiem prosto do nagrania. Zajrzyj tu wkrótce.</p>
   </header>
 
-  <div style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-6)">
-    <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap">
-      <label for="trasy-search" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Szukaj trasy</label>
-      <input class="input" type="search" id="trasy-search" placeholder="Szukaj: Rysy, wąwóz, via ferrata…" style="max-width:420px;min-height:48px;font-size:16px">
-      <span id="trasy-count" style="font-size:13px;color:var(--color-neutral-600)"></span>
+  <div style="border-top:2px solid var(--color-text);padding:var(--space-6) 0 var(--space-8);max-width:46ch">
+    <p style="color:var(--color-neutral-700);text-wrap:pretty">Zanim wyszukiwarka ruszy, wszystkie trasy znajdziesz na naszym Instagramie. A jeśli szukasz pomysłu na konkretny wyjazd — napisz, podpowiemy.</p>
+    <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-4)">
+      <a class="btn btn-primary" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Trasy na Instagramie</a>
+      <a class="btn btn-secondary" href="/kontakt/">Napisz do nas</a>
     </div>
-    <div id="trasy-regions" style="display:flex;flex-wrap:wrap;gap:var(--space-2)"></div>
-  </div>
-
-  <div class="tiles" id="trasy-list" style="padding-bottom:var(--space-8)">
-    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
-      <div class="trasa-card__img">
-        <img src="/img/g8-sm.jpg" alt="Zbójnicka Chata" width="420" height="280" decoding="async">
-        <span class="trasa-card__region">Tatry</span>
-        <span class="trasa-card__play" aria-hidden="true">▶</span>
-      </div>
-      <div class="trasa-card__name">Zbójnicka Chata</div>
-      <div class="trasa-card__meta">5 h · 12 km</div>
-    </a>
-    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
-      <div class="trasa-card__img">
-        <img src="/img/g9-sm.jpg" alt="Grań Rohaczy" width="420" height="280" loading="lazy" decoding="async">
-        <span class="trasa-card__region">Tatry</span>
-        <span class="trasa-card__play" aria-hidden="true">▶</span>
-      </div>
-      <div class="trasa-card__name">Grań Rohaczy</div>
-      <div class="trasa-card__meta">6 h · 14 km</div>
-    </a>
-    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
-      <div class="trasa-card__img">
-        <img src="/img/p2-sm.jpg" alt="Chopok i Dziumbier" width="420" height="236" loading="lazy" decoding="async">
-        <span class="trasa-card__region">Tatry</span>
-        <span class="trasa-card__play" aria-hidden="true">▶</span>
-      </div>
-      <div class="trasa-card__name">Chopok i Dziumbier</div>
-      <div class="trasa-card__meta">4 h · 11 km</div>
-    </a>
-  </div>
-
-  <div id="trasy-empty" hidden style="padding:var(--space-8) 0;max-width:40ch">
-    <h2>Nic takiego jeszcze nie mamy</h2>
-    <p style="color:var(--color-neutral-700)">Spróbuj krótszego hasła albo napisz do nas — chętnie podpowiemy trasę poza listą.</p>
-    <a class="btn btn-secondary" href="/kontakt/">Napisz do nas</a>
   </div>
 </main>
 
@@ -102,7 +65,7 @@
     </div>
     <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
       <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
-      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link is-soon" aria-disabled="true" tabindex="-1">Pomysły na trasy</a>
       <a class="footer-link" href="/oferta/">Oferta</a>
       <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
       <a class="footer-link" href="/o-nas/">O nas</a>

@@ -87,6 +87,15 @@ p { margin: 0 0 var(--space-3); }
   position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+
+/* temporarily disabled feature (route search) */
+.is-soon { opacity: 0.45; pointer-events: none; cursor: default; }
+.soon-tag {
+  display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 3px 7px; border-radius: var(--radius-sm);
+  background: var(--color-neutral-200); color: var(--color-neutral-600);
+  vertical-align: middle; margin-left: 6px;
+}
 a { color: var(--color-text); text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover { color: var(--color-accent-700); }
 img { display: block; max-width: 100%; }

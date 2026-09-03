@@ -47,7 +47,7 @@
       <span class="site-nav-burger" aria-hidden="true"></span>
     </button>
     <div class="site-nav-links" id="site-nav-links">
-      <a href="/trasy/">Trasy</a>
+      <a class="is-soon" aria-disabled="true" tabindex="-1">Trasy</a>
       <a href="/oferta/">Oferta</a>
       <a href="/wyjazdy/">Wyjazdy</a>
       <a href="/o-nas/">O nas</a>
@@ -64,44 +64,22 @@
     <h1 class="hero-full__title">Do zobaczenia<br>na szlaku!</h1>
     <p class="hero-full__lead">Pokazujemy najpiękniejsze górskie trasy i zachęcamy do aktywnego spędzania czasu w naturze.</p>
     <div class="hero-full__cta">
-      <a class="btn btn-primary" href="/trasy/">Szukaj pomysłu na trasę</a>
-      <a class="btn btn-hero-ghost" href="/oferta/">Nasza oferta</a>
+      <a class="btn btn-primary" href="/oferta/">Nasza oferta</a>
+      <a class="btn btn-hero-ghost" href="/kontakt/">Napisz do nas</a>
     </div>
   </div>
 </section>
 
 <main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
 
-  <section style="padding:var(--space-8) 0">
-    <div class="search-intro" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-3);padding-bottom:var(--space-6)">
+  <section style="padding:var(--space-8) 0" aria-label="Wyszukiwarka tras — wkrótce">
+    <div class="search-intro is-soon" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-3)">
       <div style="max-width:46ch">
-        <p class="kicker">Wyszukiwarka</p>
+        <p class="kicker">Wyszukiwarka <span class="soon-tag">wkrótce</span></p>
         <h2 style="font-size:clamp(30px,3.4vw,42px);margin:0 0 var(--space-2)">Szukasz kolejnej inspiracji na wyjazd?</h2>
-        <p style="color:var(--color-neutral-700);margin:0">Każda trasa, którą pokazaliśmy na Instagramie i w naszych social mediach, ma tu swoją kartę z linkiem do nagrania.</p>
+        <p style="color:var(--color-neutral-700);margin:0">Zbieramy wszystkie trasy z naszego Instagrama w jedną wyszukiwarkę — z filtrem po paśmie i linkiem do nagrania. Już niedługo.</p>
       </div>
-      <a class="btn btn-secondary" href="/trasy/">Otwórz wyszukiwarkę</a>
-    </div>
-    <div id="home-preview" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--space-4)">
-      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
-        <div class="preview-card__img"><img src="/img/g4-sm.jpg" alt="Rysy" width="420" height="280" loading="lazy" decoding="async"></div>
-        <div class="preview-card__name">Rysy</div>
-        <div class="preview-card__meta">Tatry · 14 h</div>
-      </a>
-      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
-        <div class="preview-card__img"><img src="/img/g8-sm.jpg" alt="Zbójnicka Chata" width="420" height="280" loading="lazy" decoding="async"></div>
-        <div class="preview-card__name">Zbójnicka Chata</div>
-        <div class="preview-card__meta">Tatry · 5 h</div>
-      </a>
-      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
-        <div class="preview-card__img"><img src="/img/g9-sm.jpg" alt="Grań Rohaczy" width="420" height="280" loading="lazy" decoding="async"></div>
-        <div class="preview-card__name">Grań Rohaczy</div>
-        <div class="preview-card__meta">Tatry · 6 h</div>
-      </a>
-      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
-        <div class="preview-card__img"><img src="/img/p2-sm.jpg" alt="Tarnica" width="420" height="236" loading="lazy" decoding="async"></div>
-        <div class="preview-card__name">Tarnica</div>
-        <div class="preview-card__meta">Bieszczady · 4 h</div>
-      </a>
+      <span class="btn btn-secondary">Wkrótce</span>
     </div>
   </section>
 
@@ -191,7 +169,7 @@
     </div>
     <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
       <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
-      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link is-soon" aria-disabled="true" tabindex="-1">Pomysły na trasy</a>
       <a class="footer-link" href="/oferta/">Oferta</a>
       <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
       <a class="footer-link" href="/o-nas/">O nas</a>
