@@ -1,5 +1,5 @@
 /* Organic — retuned: Montserrat, Outside-yellow accent, minimal geometry. Tokens first, components below. */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* Montserrat is loaded via <link rel="preconnect"> + <link rel="stylesheet"> in each page's <head>. */
 
 :root {
   --color-bg: #fcfcfb;
@@ -79,6 +79,14 @@ h6 {
   text-transform: uppercase; line-height: 1.3;
 }
 p { margin: 0 0 var(--space-3); }
+.kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  line-height: 1.3; color: var(--color-neutral-700); margin: 0 0 var(--space-3);
+}
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 a { color: var(--color-text); text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover { color: var(--color-accent-700); }
 img { display: block; max-width: 100%; }
@@ -183,6 +191,98 @@ textarea.input { min-height: 110px; resize: vertical; }
 .nav a { color: inherit; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--color-text); box-shadow: inset 0 -2px 0 var(--color-accent); }
 
+/* — skip link — */
+.skip-link {
+  position: absolute; left: var(--space-4); top: -60px; z-index: 200;
+  background: var(--color-text); color: var(--color-bg);
+  padding: 10px 16px; border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; transition: top 120ms ease;
+}
+.skip-link:focus-visible { top: var(--space-2); color: var(--color-bg); }
+
+/* — site header nav — */
+.site-nav-wrap { border-bottom: 1px solid var(--color-divider); position: relative; }
+.site-nav {
+  display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-6);
+  max-width: 1180px; margin: 0 auto; padding: var(--space-4) var(--space-6);
+}
+.site-nav-brand {
+  font-family: var(--font-heading); font-weight: 800; font-size: 21px;
+  color: var(--color-text); text-decoration: none; margin-right: auto;
+  letter-spacing: 0.02em; text-transform: uppercase;
+}
+.site-nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-6); }
+.site-nav-links a {
+  color: inherit; text-decoration: none;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding-bottom: 3px;
+}
+.site-nav-links a:hover,
+.site-nav-links a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--color-accent); }
+.site-nav-toggle {
+  display: none; width: 44px; height: 44px; padding: 0;
+  align-items: center; justify-content: center;
+  background: transparent; border: 1px solid var(--color-divider);
+  border-radius: var(--radius-sm); cursor: pointer;
+}
+.site-nav-toggle:hover { background: var(--color-neutral-200); }
+.site-nav-burger { position: relative; width: 18px; height: 2px; background: var(--color-text); }
+.site-nav-burger::before, .site-nav-burger::after {
+  content: ""; position: absolute; left: 0; width: 18px; height: 2px; background: var(--color-text);
+  transition: transform 120ms ease, top 120ms ease;
+}
+.site-nav-burger::before { top: -6px; }
+.site-nav-burger::after { top: 6px; }
+.site-nav-toggle[aria-expanded='true'] .site-nav-burger { background: transparent; }
+.site-nav-toggle[aria-expanded='true'] .site-nav-burger::before { top: 0; transform: rotate(45deg); }
+.site-nav-toggle[aria-expanded='true'] .site-nav-burger::after { top: 0; transform: rotate(-45deg); }
+
+/* — footer — */
+.footer-link { color: inherit; text-decoration: none; }
+.footer-link:hover { color: var(--color-accent-700); }
+.link-quiet { color: inherit; text-decoration: none; }
+.link-quiet:hover { color: var(--color-accent-700); }
+
+/* — route preview cards (home) — */
+.preview-card { display: flex; flex-direction: column; gap: var(--space-2); text-decoration: none; color: inherit; }
+.preview-card__img {
+  aspect-ratio: 3 / 2; border-radius: var(--radius-lg); overflow: hidden; background: var(--color-neutral-300);
+}
+.preview-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.preview-card__name {
+  font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.02em; font-size: 16px;
+  padding-top: var(--space-1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.preview-card__meta { font-size: 13px; color: var(--color-neutral-600); }
+
+/* — route cards (search) — */
+.trasa-card { display: flex; flex-direction: column; gap: var(--space-2); text-decoration: none; color: inherit; }
+.trasa-card__img {
+  position: relative; aspect-ratio: 3 / 2; border-radius: var(--radius-lg);
+  overflow: hidden; background: var(--color-neutral-300);
+}
+.trasa-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.trasa-card__region {
+  position: absolute; left: 0; top: 0; background: var(--color-accent); color: var(--color-text);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 10px;
+}
+.trasa-card__play {
+  position: absolute; right: 10px; bottom: 10px; width: 32px; height: 32px;
+  background: var(--color-bg); display: grid; place-items: center; color: var(--color-text); font-size: 12px;
+}
+.trasa-card__name {
+  font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.02em;
+  font-size: 19px; line-height: 1.15; text-wrap: pretty;
+}
+.trasa-card__meta { font-size: 13px; color: var(--color-neutral-600); }
+.trasa-region[aria-pressed='true'] { background: var(--color-accent); border-color: transparent; }
+.trasa-region[aria-pressed='false'] { border-color: var(--color-divider); }
+
+/* — contact topic buttons — */
+.temat-opcja { border-color: var(--color-divider); background: var(--color-bg); }
+.temat-opcja[aria-pressed='true'] { background: var(--color-accent); color: var(--color-text); border-color: transparent; }
+
 /* — tables — */
 .table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .table th {
@@ -217,14 +317,41 @@ textarea.input { min-height: 110px; resize: vertical; }
 
 @media (max-width: 640px) {
   main { padding-left: var(--space-4) !important; padding-right: var(--space-4) !important; }
-  nav { gap: var(--space-2) !important; padding: var(--space-3) var(--space-4) !important; }
-  nav > a:first-child { margin-right: 0 !important; font-size: 18px !important; }
-  nav > div { flex: 1 1 100%; flex-wrap: nowrap !important; gap: var(--space-3) !important; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  nav > div::-webkit-scrollbar { display: none; }
-  nav > div > a { flex: none; font-size: 11px !important; }
-  nav > div > a.btn { margin-left: auto; }
+  .site-nav { gap: var(--space-3); padding: var(--space-3) var(--space-4); flex-wrap: nowrap; }
+  .site-nav-brand { font-size: 18px; }
+  .js .site-nav-toggle { display: inline-flex; }
+  .site-nav-cta { padding: 12px 16px; }
+  .js .site-nav-links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; flex-wrap: nowrap;
+    gap: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-divider);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2) var(--space-4);
+    z-index: 60;
+  }
+  .js .site-nav-links.open { display: flex; }
+  .site-nav-links a {
+    padding: var(--space-3) var(--space-1);
+    font-size: 13px;
+    border-top: 1px solid var(--color-divider);
+  }
+  .site-nav-links a:first-child { border-top: 0; }
+  .about-home__media { order: 2; margin-top: var(--space-4); }
+  .search-intro { align-items: flex-start !important; text-align: left !important; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .card { padding: var(--space-4); }
   .btn { min-height: 46px; }
   .day-row { grid-template-columns: minmax(0, 1fr) !important; gap: var(--space-2) !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

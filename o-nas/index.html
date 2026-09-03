@@ -1,66 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>O nas — bushhike</title>
+<meta name="description" content="O nas — Karol, przewodnik beskidzki, i Kasia, instruktorka jogi. Jak z instagramowych rolek z gór zrobiła się bushhike.">
+<link rel="canonical" href="https://bushhike.pl/o-nas/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="O nas — bushhike">
+<meta property="og:description" content="Karol, przewodnik beskidzki, i Kasia, instruktorka jogi. Jak z instagramowych rolek z gór zrobiła się bushhike.">
+<meta property="og:url" content="https://bushhike.pl/o-nas/">
+<meta property="og:image" content="https://bushhike.pl/img/g9.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>O nas — bushhike</title>
-</helmet>
-<dc-import name="Nav" active="onas" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/">Trasy</a>
+      <a href="/oferta/">Oferta</a>
+      <a href="/wyjazdy/">Wyjazdy</a>
+      <a href="/o-nas/" aria-current="page">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
   <header style="max-width:44ch;padding:var(--space-8) 0 var(--space-6)">
-    <h6 style="color:var(--color-neutral-700)">O nas</h6>
+    <p class="kicker">O nas</p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Karol i Kasia</h1>
-    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Bushhike zaczął się od rolek z naszych własnych wyjść. Ludzie zaczęli pytać o trasy, potem o to, czy nie poprowadzilibyśmy ich sami. Tak wyszła z tego robota.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Bushhike zaczął się od rolek z naszych własnych wyjść. Ludzie zaczęli pytać o trasy, potem o to, czy nie poprowadzilibyśmy ich sami. Tak wyszła z tego robota.</p>
   </header>
 
   <section class="split-rev" style="align-items:center;padding:var(--space-6) 0">
     <div style="aspect-ratio:4/5;overflow:hidden;background:var(--color-neutral-300)">
-      <img class="washed" src="img/g9.jpg" alt="Karol" style="width:100%;height:100%;object-fit:cover">
+      <img class="washed" src="/img/g9.jpg" alt="Karol na szlaku" width="960" height="1280" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
     </div>
     <div style="max-width:46ch">
       <h2 style="font-size:clamp(28px,3.4vw,40px);margin-bottom:var(--space-1)">Karol</h2>
-      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700);padding-bottom:var(--space-3)">Przewodnik beskidzki, nr identyfikatora 123</div>
-      <p style="opacity:0.85;text-wrap:pretty">W górach jestem od dziecka, uprawnienia przewodnickie zrobiłem, żeby móc zabierać ze sobą ludzi legalnie i porządnie. Najbardziej lubię Gorce i te fragmenty Beskidu Żywieckiego, na które nikt nie chodzi w środku tygodnia.</p>
-      <p style="opacity:0.85;text-wrap:pretty">Prowadzę spokojnie: więcej postojów, mniej kilometrów na godzinę. Wolę, żeby grupa zapamiętała widok, a nie tempo.</p>
+      <p class="kicker" style="margin-bottom:var(--space-3)">Przewodnik beskidzki, nr identyfikatora 123</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">W górach jestem od dziecka, uprawnienia przewodnickie zrobiłem, żeby móc zabierać ze sobą ludzi legalnie i porządnie. Najbardziej lubię Gorce i te fragmenty Beskidu Żywieckiego, na które nikt nie chodzi w środku tygodnia.</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">Prowadzę spokojnie: więcej postojów, mniej kilometrów na godzinę. Wolę, żeby grupa zapamiętała widok, a nie tempo.</p>
     </div>
   </section>
 
   <section class="split" style="align-items:center;padding:var(--space-6) 0">
     <div style="max-width:46ch">
       <h2 style="font-size:clamp(28px,3.4vw,40px);margin-bottom:var(--space-1)">Kasia</h2>
-      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700);padding-bottom:var(--space-3)">Instruktorka jogi</div>
-      <p style="opacity:0.85;text-wrap:pretty">Prowadzę zajęcia i warsztaty, w sali i na trawie. Interesuje mnie praktyka, która pomaga w codziennym ciele — po biurku, po długim zejściu ze szlaku, po nieprzespanej nocy.</p>
-      <p style="opacity:0.85;text-wrap:pretty">Na wyjazdach robimy krótkie sesje rano i dłuższe rozciąganie wieczorem. Nikt nikogo nie sprawdza, nie trzeba nic umieć.</p>
+      <p class="kicker" style="margin-bottom:var(--space-3)">Instruktorka jogi</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">Prowadzę zajęcia i warsztaty, w sali i na trawie. Interesuje mnie praktyka, która pomaga w codziennym ciele — po biurku, po długim zejściu ze szlaku, po nieprzespanej nocy.</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">Na wyjazdach robimy krótkie sesje rano i dłuższe rozciąganie wieczorem. Nikt nikogo nie sprawdza, nie trzeba nic umieć.</p>
     </div>
     <div style="aspect-ratio:4/5;overflow:hidden;background:var(--color-neutral-300)">
-      <img class="washed" src="img/y5.jpg" alt="Kasia" style="width:100%;height:100%;object-fit:cover">
+      <img class="washed" src="/img/y5.jpg" alt="Kasia" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
     </div>
   </section>
 
-  <section style="padding:var(--space-8) 0">
+  <section style="padding:var(--space-8) 0" aria-label="Zdjęcia z gór">
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-3)">
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g11.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g11-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g2.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g2-sm.jpg" alt="" width="373" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g1.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g1-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g6.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g6-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/y9.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y9-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
   </section>
@@ -68,25 +94,44 @@
   <section style="background:var(--color-accent);padding:var(--space-8);margin-bottom:var(--space-8);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-6);align-items:center">
     <div style="max-width:34ch">
       <h2 style="font-size:clamp(26px,3vw,34px)">Codziennie coś wrzucamy</h2>
-      <p style="opacity:0.8;margin-bottom:var(--space-4)">Rolki z tras, warunki na szlaku i zapowiedzi wyjazdów lecą na Instagramie.</p>
+      <p style="color:var(--color-neutral-800);margin-bottom:var(--space-4)">Rolki z tras, warunki na szlaku i zapowiedzi wyjazdów lecą na Instagramie.</p>
       <a class="btn" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" style="background:var(--color-text);color:var(--color-accent)">@bushhike na Instagramie</a>
     </div>
     <div style="display:flex;gap:var(--space-3);justify-content:flex-end;flex-wrap:wrap">
       <div style="width:130px;height:170px;overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g4.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g4-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="width:130px;height:170px;overflow:hidden;background:var(--color-neutral-300);margin-top:var(--space-6)">
-        <img class="washed" src="img/y6.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y6-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="width:130px;height:170px;overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g12.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g12-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
   </section>
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}"></script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>

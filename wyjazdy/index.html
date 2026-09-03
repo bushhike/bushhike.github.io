@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Wyjazdy — bushhike</title>
+<meta name="description" content="Najbliższe wyjazdy bushhike — kameralne wyjazdy góry + joga. Sprawdź terminy i zapisy, m.in. Joga i jesienne Pieniny 2–4 października 2026.">
+<link rel="canonical" href="https://bushhike.pl/wyjazdy/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Wyjazdy — bushhike">
+<meta property="og:description" content="Kameralne wyjazdy góry + joga. Najbliższe terminy i zapisy.">
+<meta property="og:url" content="https://bushhike.pl/wyjazdy/">
+<meta property="og:image" content="https://bushhike.pl/img/g8.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>Wyjazdy — bushhike</title>
-</helmet>
-<dc-import name="Nav" active="wyjazdy" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/">Trasy</a>
+      <a href="/oferta/">Oferta</a>
+      <a href="/wyjazdy/" aria-current="page">Wyjazdy</a>
+      <a href="/o-nas/">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
   <header style="max-width:46ch;padding:var(--space-8) 0 var(--space-6)">
-    <h6 style="color:var(--color-neutral-700)">Wyjazdy</h6>
+    <p class="kicker">Wyjazdy</p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Najbliższe terminy</h1>
-    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Wyjazdy prowadzimy w małych grupach. Kiedy miejsca się skończą, zapisujemy na listę rezerwową i przy najbliższej okazji dajemy znać.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Wyjazdy prowadzimy w małych grupach. Kiedy miejsca się skończą, zapisujemy na listę rezerwową i przy najbliższej okazji dajemy znać.</p>
   </header>
 
   <section style="display:flex;flex-direction:column;gap:var(--space-6);padding-bottom:var(--space-8)">
 
     <article class="split-rev" style="gap:var(--space-6);border-top:2px solid var(--color-text);padding-top:var(--space-4)">
       <div style="min-height:280px;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g8.jpg" alt="Pieniny" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g8.jpg" alt="Pieniny — Trzy Korony" width="960" height="1280" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="padding:var(--space-2) 0 var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);justify-content:center">
         <div style="display:flex;flex-wrap:wrap;gap:6px">
@@ -34,10 +60,10 @@
           <span class="tag tag-accent-2">z PTTK Tarnów</span>
         </div>
         <h2 style="font-size:clamp(26px,3vw,36px);margin:0">Joga i jesienne Pieniny</h2>
-        <p style="margin:0;opacity:0.85;max-width:44ch;text-wrap:pretty">Trzy dni na pienińskich szlakach: Wysoki Wierch, Wysoka z Wąwozem Homole i Trzy Korony, wieczorne sesje jogi i poranna praktyka na koniec.</p>
+        <p style="margin:0;color:var(--color-neutral-700);max-width:44ch;text-wrap:pretty">Trzy dni na pienińskich szlakach: Wysoki Wierch, Wysoka z Wąwozem Homole i Trzy Korony, wieczorne sesje jogi i poranna praktyka na koniec.</p>
         <div style="display:flex;align-items:baseline;gap:var(--space-3);padding-top:var(--space-2)">
           <span style="font-family:var(--font-heading);font-weight:800;letter-spacing:-0.03em;font-size:30px">750–850 zł</span>
-          <span style="font-size:13px;opacity:0.65">przejazd, nocleg i wyżywienie w cenie</span>
+          <span style="font-size:13px;color:var(--color-neutral-600)">przejazd, nocleg i wyżywienie w cenie</span>
         </div>
         <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-2)">
           <a class="btn btn-primary" href="/wyjazdy/pieniny/">Program i zapisy</a>
@@ -62,17 +88,36 @@
   <section style="border-top:1px solid var(--color-divider);padding:var(--space-8) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-6);align-items:center">
     <div style="max-width:36ch">
       <h2 style="font-size:clamp(26px,3vw,34px)">Chcecie własny termin?</h2>
-      <p style="opacity:0.8;text-wrap:pretty">Każdy z tych wyjazdów robimy też dla grup zamkniętych — od sześciu osób w górę, w terminie, który Wam pasuje.</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">Każdy z tych wyjazdów robimy też dla grup zamkniętych — od sześciu osób w górę, w terminie, który Wam pasuje.</p>
       <a class="btn btn-primary" href="/kontakt/">Napisz do nas</a>
     </div>
     <div style="aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-      <img class="washed" src="img/g5.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+      <img class="washed" src="/img/g5.jpg" alt="" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
     </div>
   </section>
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}"></script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>

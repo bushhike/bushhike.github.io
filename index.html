@@ -1,73 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>bushhike — góry i yoga | wycieczki z przewodnikiem i warsztaty jogi</title>
+<meta name="description" content="Karol i Kasia — przewodnik beskidzki i instruktorka jogi. Wycieczki z przewodnikiem po Beskidach, Pieninach i Bieszczadach, warsztaty jogi oraz wspólne wyjazdy góry + yoga.">
+<link rel="canonical" href="https://bushhike.pl/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="bushhike — góry i yoga">
+<meta property="og:description" content="Wycieczki z przewodnikiem po Beskidach, Pieninach i Bieszczadach, warsztaty jogi i wspólne wyjazdy góry + yoga.">
+<meta property="og:url" content="https://bushhike.pl/">
+<meta property="og:image" content="https://bushhike.pl/img/g5.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://docs.google.com">
+<link rel="preload" as="image" href="/img/g5.jpg" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "bushhike",
+  "description": "Wycieczki z przewodnikiem beskidzkim po Beskidach, Pieninach i Bieszczadach, warsztaty jogi oraz wyjazdy łączące góry z praktyką jogi.",
+  "url": "https://bushhike.pl/",
+  "image": "https://bushhike.pl/img/g5.jpg",
+  "email": "bushhike.contact@gmail.com",
+  "telephone": "+48790858578",
+  "areaServed": "Polska — Beskidy, Pieniny, Bieszczady, Gorce",
+  "sameAs": ["https://www.instagram.com/bushhike/"]
+}
+</script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>bushhike — góry i yoga</title>
-</helmet>
-<dc-import name="Nav" active="home" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/">Trasy</a>
+      <a href="/oferta/">Oferta</a>
+      <a href="/wyjazdy/">Wyjazdy</a>
+      <a href="/o-nas/">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
 
   <section class="split" style="align-items:center;padding:var(--space-8) 0">
     <div style="max-width:34ch">
-      <h6 style="color:var(--color-neutral-700)">@bushhike · Karol i Kasia</h6>
-      <h1 style="font-size:clamp(38px,4.2vw,58px);letter-spacing:-0.03em;max-width:20ch">Do zobaczenia na szlaku</h1>
-      <p style="font-size:18px;opacity:0.8;max-width:38ch;text-wrap:pretty">Staramy się zarażać miłością do aktywnego czasu w naturze. Prowadzimy wycieczki po Beskidach, Pieninach i Bieszczadach, warsztaty jogi i wspólne wyjazdy, w których jedno łączy się z drugim.</p>
+      <p class="kicker">@bushhike · Karol i Kasia</p>
+      <h1 style="font-size:clamp(38px,4.2vw,58px);letter-spacing:-0.03em;max-width:20ch">Do zobaczenia na szlaku!</h1>
+      <p style="font-size:18px;color:var(--color-neutral-700);max-width:38ch;text-wrap:pretty">Staramy się zarażać miłością do aktywnego czasu w naturze. Prowadzimy wycieczki po Beskidach, Pieninach i Bieszczadach, warsztaty jogi i wspólne wyjazdy, w których jedno łączy się z drugim.</p>
       <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);padding-top:var(--space-3)">
         <a class="btn btn-primary" href="/trasy/">Szukaj pomysłu na trasę</a>
         <a class="btn btn-secondary" href="/oferta/">Nasza oferta</a>
       </div>
     </div>
     <div style="aspect-ratio:4/5;overflow:hidden;background:var(--color-neutral-300)">
-      <img class="washed" src="img/g5.jpg" alt="Karol i Kasia w Tatrach" style="width:100%;height:100%;object-fit:cover">
+      <img class="washed" src="/img/g5.jpg" alt="Karol i Kasia w górach" width="960" height="1280" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
     </div>
   </section>
 
   <section style="padding:var(--space-8) 0">
-    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-3);padding-bottom:var(--space-6)">
+    <div class="search-intro" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-3);padding-bottom:var(--space-6)">
       <div style="max-width:46ch">
-        <h6 style="color:var(--color-neutral-700)">Wyszukiwarka</h6>
+        <p class="kicker">Wyszukiwarka</p>
         <h2 style="font-size:clamp(30px,3.4vw,42px);margin:0 0 var(--space-2)">Szukasz kolejnej inspiracji na wyjazd?</h2>
-        <p style="opacity:0.8;margin:0">Każda trasa, którą pokazaliśmy na Instagramie i w naszych social mediach, ma tu swoją kartę z linkiem do nagrania.</p>
+        <p style="color:var(--color-neutral-700);margin:0">Każda trasa, którą pokazaliśmy na Instagramie i w naszych social mediach, ma tu swoją kartę z linkiem do nagrania.</p>
       </div>
       <a class="btn btn-secondary" href="/trasy/">Otwórz wyszukiwarkę</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--space-4)">
-      <a href="/trasy/" style="text-decoration:none;color:inherit">
-        <div style="aspect-ratio:9/13;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/g4.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="font-family:var(--font-heading);font-weight:700;letter-spacing:-0.02em;font-size:16px;padding-top:var(--space-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Rysy</div>
-        <div style="font-size:13px;opacity:0.6">Tatry · 14 h</div>
+    <div id="home-preview" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--space-4)">
+      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
+        <div class="preview-card__img"><img src="/img/g4-sm.jpg" alt="Rysy" width="420" height="280" loading="lazy" decoding="async"></div>
+        <div class="preview-card__name">Rysy</div>
+        <div class="preview-card__meta">Tatry · 14 h</div>
       </a>
-      <a href="/trasy/" style="text-decoration:none;color:inherit">
-        <div style="aspect-ratio:9/13;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/g11.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="font-family:var(--font-heading);font-weight:700;letter-spacing:-0.02em;font-size:16px;padding-top:var(--space-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Martinské hole</div>
-        <div style="font-size:13px;opacity:0.6">Słowacja · 6 h</div>
+      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
+        <div class="preview-card__img"><img src="/img/g8-sm.jpg" alt="Zbójnicka Chata" width="420" height="280" loading="lazy" decoding="async"></div>
+        <div class="preview-card__name">Zbójnicka Chata</div>
+        <div class="preview-card__meta">Tatry · 5 h</div>
       </a>
-      <a href="/trasy/" style="text-decoration:none;color:inherit">
-        <div style="aspect-ratio:9/13;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/p2.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="font-family:var(--font-heading);font-weight:700;letter-spacing:-0.02em;font-size:16px;padding-top:var(--space-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Tarnica</div>
-        <div style="font-size:13px;opacity:0.6">Bieszczady · 4 h</div>
+      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
+        <div class="preview-card__img"><img src="/img/g9-sm.jpg" alt="Grań Rohaczy" width="420" height="280" loading="lazy" decoding="async"></div>
+        <div class="preview-card__name">Grań Rohaczy</div>
+        <div class="preview-card__meta">Tatry · 6 h</div>
       </a>
-      <a href="/trasy/" style="text-decoration:none;color:inherit">
-        <div style="aspect-ratio:9/13;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/g1.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
-        </div>
-        <div style="font-family:var(--font-heading);font-weight:700;letter-spacing:-0.02em;font-size:16px;padding-top:var(--space-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Kilimandżaro</div>
-        <div style="font-size:13px;opacity:0.6">Poza Europą · 7 dni</div>
+      <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="preview-card">
+        <div class="preview-card__img"><img src="/img/p2-sm.jpg" alt="Tarnica" width="420" height="236" loading="lazy" decoding="async"></div>
+        <div class="preview-card__name">Tarnica</div>
+        <div class="preview-card__meta">Bieszczady · 4 h</div>
       </a>
     </div>
   </section>
@@ -75,7 +109,7 @@
   <section style="padding:var(--space-8) 0">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding-bottom:var(--space-6)">
       <div>
-        <h6 style="color:var(--color-neutral-700)">Oferta</h6>
+        <p class="kicker">Oferta</p>
         <h2 style="font-size:clamp(30px,3.4vw,42px);margin:0">Trzy rzeczy, które robimy</h2>
       </div>
       <a class="btn btn-ghost" href="/oferta/">Zobacz szczegóły →</a>
@@ -83,7 +117,7 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-4)">
       <a class="card elev-sm" href="/oferta/#przewodnik" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;order:2">
         <div style="aspect-ratio:4/3;min-height:0;overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/p1.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+          <img class="washed" src="/img/p1-sm.jpg" alt="" width="560" height="315" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="padding:var(--space-4) var(--space-4) var(--space-6);display:flex;flex-direction:column;gap:var(--space-2)">
           <span class="card-kicker">Karol · przewodnik beskidzki</span>
@@ -93,7 +127,7 @@
       </a>
       <a class="card elev-sm" href="/oferta/#yoga" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;order:3">
         <div style="aspect-ratio:4/3;min-height:0;overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/y11.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+          <img class="washed" src="/img/y11-sm.jpg" alt="" width="560" height="374" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="padding:var(--space-4) var(--space-4) var(--space-6);display:flex;flex-direction:column;gap:var(--space-2)">
           <span class="card-kicker">Kasia · instruktorka jogi</span>
@@ -103,7 +137,7 @@
       </a>
       <a class="card elev-sm" href="/oferta/#wyjazdy" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;order:1">
         <div style="aspect-ratio:4/3;min-height:0;overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="img/y4.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+          <img class="washed" src="/img/y4-sm.jpg" alt="" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="padding:var(--space-4) var(--space-4) var(--space-6);display:flex;flex-direction:column;gap:var(--space-2)">
           <span class="card-kicker">Razem</span>
@@ -116,9 +150,9 @@
 
   <section style="border-top:3px solid var(--color-text);padding:var(--space-6) 0 var(--space-8);margin:var(--space-8) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-8);align-items:center">
     <div>
-      <h6 style="display:inline-block;background:var(--color-accent);padding:5px 9px">Najbliższy wyjazd</h6>
+      <p class="kicker" style="display:inline-block;background:var(--color-accent);color:var(--color-text);padding:5px 9px">Najbliższy wyjazd</p>
       <h2 style="font-size:clamp(28px,3.2vw,38px)">Joga i jesienne Pieniny</h2>
-      <p style="opacity:0.8;max-width:38ch;text-wrap:pretty">Trzy dni na pienińskich szlakach: Wysoki Wierch, Wysoka z Wąwozem Homole i Trzy Korony, a do tego wieczorne sesje jogi.</p>
+      <p style="color:var(--color-neutral-700);max-width:38ch;text-wrap:pretty">Trzy dni na pienińskich szlakach: Wysoki Wierch, Wysoka z Wąwozem Homole i Trzy Korony, a do tego wieczorne sesje jogi.</p>
       <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);padding:var(--space-2) 0 var(--space-4)">
         <span class="tag tag-accent">2–4 października</span>
         <span class="tag tag-neutral">750–850 zł</span>
@@ -127,31 +161,50 @@
       <a class="btn btn-primary" href="/wyjazdy/pieniny/">Program i zapisy</a>
     </div>
     <div style="aspect-ratio:5/4;overflow:hidden;background:var(--color-neutral-300)">
-      <img class="washed" src="img/g8.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+      <img class="washed" src="/img/g8.jpg" alt="Pieniny — Trzy Korony" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
     </div>
   </section>
 
-  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-8);align-items:center;padding:var(--space-8) 0">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
+  <section class="about-home" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-8);align-items:center;padding:var(--space-8) 0">
+    <div class="about-home__media" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g9.jpg" alt="Karol" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g9-sm.jpg" alt="Karol" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);margin-top:var(--space-6)">
-        <img class="washed" src="img/y5.jpg" alt="Kasia" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y5-sm.jpg" alt="Kasia" width="420" height="560" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
     <div style="max-width:36ch">
-      <h6 style="color:var(--color-neutral-700)">O nas</h6>
+      <p class="kicker">O nas</p>
       <h2 style="font-size:clamp(28px,3.2vw,38px)">Chodzimy razem od kilku lat</h2>
-      <p style="opacity:0.8;text-wrap:pretty">Profil bushhike powstał samoistnie z naszych prywatnych wypadów w góry — zawsze planowaliśmy je dla całej paczki znajomych. Potem zaczęliśmy pokazywać te trasy szerzej i tak z tego wyszła robota.</p>
+      <p style="color:var(--color-neutral-700);text-wrap:pretty">Profil bushhike powstał samoistnie z naszych prywatnych wypadów w góry — zawsze planowaliśmy je dla całej paczki znajomych. Potem zaczęliśmy pokazywać te trasy szerzej i tak z tego wyszła robota.</p>
       <a class="btn btn-ghost" href="/o-nas/">Poznaj nas →</a>
     </div>
   </section>
 
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}"></script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>

@@ -1,68 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Kontakt — bushhike</title>
+<meta name="description" content="Kontakt do bushhike — napisz w sprawie wycieczki z przewodnikiem, warsztatu jogi albo wspólnego wyjazdu. E-mail, telefon i formularz.">
+<link rel="canonical" href="https://bushhike.pl/kontakt/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kontakt — bushhike">
+<meta property="og:description" content="Napisz w sprawie wycieczki z przewodnikiem, warsztatu jogi albo wspólnego wyjazdu.">
+<meta property="og:url" content="https://bushhike.pl/kontakt/">
+<meta property="og:image" content="https://bushhike.pl/img/g3.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>Kontakt — bushhike</title>
-</helmet>
-<dc-import name="Nav" active="kontakt" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/">Trasy</a>
+      <a href="/oferta/">Oferta</a>
+      <a href="/wyjazdy/">Wyjazdy</a>
+      <a href="/o-nas/">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/" aria-current="page">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
   <header style="max-width:44ch;padding:var(--space-8) 0 var(--space-6)">
-    <h6 style="color:var(--color-neutral-700)">Kontakt</h6>
+    <p class="kicker">Kontakt</p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Napiszcie, co Was interesuje</h1>
-    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Odpisujemy zwykle w ciągu dnia. Jeśli pytacie o konkretny termin, podajcie od razu liczbę osób — łatwiej nam wtedy coś zaproponować.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Odpisujemy zwykle w ciągu dnia. Jeśli pytacie o konkretny termin, podajcie od razu liczbę osób — łatwiej nam wtedy coś zaproponować.</p>
   </header>
 
   <div class="split" style="align-items:start;padding-bottom:var(--space-8)">
 
-    <form onSubmit="{{ onSubmit }}" style="border-top:2px solid var(--color-text);padding:var(--space-6) 0 0;display:flex;flex-direction:column;gap:var(--space-4)">
+    <form id="kontakt-form" style="border-top:2px solid var(--color-text);padding:var(--space-6) 0 0;display:flex;flex-direction:column;gap:var(--space-4)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-4)">
         <div class="field">
           <label for="k-imie">Imię</label>
-          <input class="input" id="k-imie" value="{{ imie }}" onChange="{{ onImie }}">
+          <input class="input" id="k-imie" name="imie" autocomplete="given-name">
         </div>
         <div class="field">
-          <label for="k-mail">E-mail albo telefon</label>
-          <input class="input" id="k-mail" value="{{ kontakt }}" onChange="{{ onKontakt }}">
+          <label for="k-mail">E-mail</label>
+          <input class="input" id="k-mail" name="email" type="email" autocomplete="email" placeholder="np. jan@przyklad.pl">
+        </div>
+        <div class="field">
+          <label for="k-tel">Numer telefonu</label>
+          <input class="input" id="k-tel" name="tel" type="tel" autocomplete="tel" placeholder="np. +48 600 700 800">
         </div>
       </div>
 
-      <div class="field">
-        <label>Czego dotyczy</label>
+      <div class="field" role="group" aria-label="Czego dotyczy">
+        <span class="field-label" style="display:block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:7px;color:var(--color-neutral-700)">Czego dotyczy</span>
         <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);padding-top:2px">
-          <sc-for list="{{ tematy }}" as="t" hint-placeholder-count="4">
-            <button type="button" class="btn" onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
-          </sc-for>
+          <button type="button" class="btn temat-opcja" aria-pressed="true">Wycieczka z przewodnikiem</button>
+          <button type="button" class="btn temat-opcja" aria-pressed="false">Warsztat jogi</button>
+          <button type="button" class="btn temat-opcja" aria-pressed="false">Wyjazd góry + yoga</button>
+          <button type="button" class="btn temat-opcja" aria-pressed="false">Coś innego</button>
         </div>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-4)">
         <div class="field">
           <label for="k-osoby">Ile osób</label>
-          <input class="input" id="k-osoby" value="{{ osoby }}" onChange="{{ onOsoby }}" placeholder="np. 8">
+          <input class="input" id="k-osoby" name="osoby" inputmode="numeric" placeholder="np. 8">
         </div>
         <div class="field">
           <label for="k-termin">Termin lub okolice terminu</label>
-          <input class="input" id="k-termin" value="{{ termin }}" onChange="{{ onTermin }}" placeholder="np. drugi weekend maja">
+          <input class="input" id="k-termin" name="termin" placeholder="np. drugi weekend maja">
         </div>
       </div>
 
       <div class="field">
         <label for="k-tresc">Wiadomość</label>
-        <textarea class="input" id="k-tresc" value="{{ tresc }}" onChange="{{ onTresc }}" placeholder="Napiszcie kilka słów o grupie i o tym, na czym Wam zależy." style="border-radius:var(--radius-md);min-height:120px;background:var(--color-bg)"></textarea>
+        <textarea class="input" id="k-tresc" name="tresc" placeholder="Napiszcie kilka słów o grupie i o tym, na czym Wam zależy." style="border-radius:var(--radius-md);min-height:120px;background:var(--color-bg)"></textarea>
       </div>
 
       <div style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap">
         <button type="submit" class="btn btn-primary">Wyślij zapytanie</button>
-        <span style="font-size:12px;opacity:0.6;max-width:34ch">Przycisk otwiera Wasz program pocztowy z gotową treścią — nic nie wysyłamy w tle.</span>
+        <span style="font-size:12px;color:var(--color-neutral-600);max-width:34ch">Przycisk otwiera Wasz program pocztowy z gotową treścią — nic nie wysyłamy w tle.</span>
       </div>
     </form>
 
@@ -84,9 +115,9 @@
         </a>
       </div>
       <div style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g3.jpg" alt="Karol i Kasia" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g3.jpg" alt="Karol i Kasia" width="1280" height="853" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
-      <div style="font-size:13px;opacity:0.7;display:flex;flex-direction:column;gap:4px">
+      <div style="font-size:13px;color:var(--color-neutral-600);display:flex;flex-direction:column;gap:4px">
         <span>Karol Janek — przewodnik beskidzki, nr identyfikatora 123</span>
         <span>Kasia — instruktorka jogi</span>
       </div>
@@ -94,50 +125,27 @@
   </div>
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}">
-const TEMATY = ["Wycieczka z przewodnikiem", "Warsztat jogi", "Wyjazd góry + yoga", "Coś innego"];
-
-class Component extends DCLogic {
-  state = { imie: "", kontakt: "", osoby: "", termin: "", tresc: "", temat: TEMATY[0] };
-
-  submit = (e) => {
-    e.preventDefault();
-    const s = this.state;
-    const body = [
-      "Imię: " + s.imie,
-      "Kontakt: " + s.kontakt,
-      "Temat: " + s.temat,
-      "Liczba osób: " + s.osoby,
-      "Termin: " + s.termin,
-      "",
-      s.tresc,
-    ].join("\n");
-    window.location.href =
-      "mailto:bushhike.contact@gmail.com?subject=" +
-      encodeURIComponent("Zapytanie: " + s.temat) +
-      "&body=" + encodeURIComponent(body);
-  };
-
-  renderVals() {
-    const set = (k) => (e) => this.setState({ [k]: e.target.value });
-    return {
-      imie: this.state.imie, kontakt: this.state.kontakt,
-      osoby: this.state.osoby, termin: this.state.termin, tresc: this.state.tresc,
-      onImie: set("imie"), onKontakt: set("kontakt"),
-      onOsoby: set("osoby"), onTermin: set("termin"), onTresc: set("tresc"),
-      onSubmit: this.submit,
-      tematy: TEMATY.map((label) => ({
-        label,
-        onClick: () => this.setState({ temat: label }),
-        style: label === this.state.temat
-          ? "background:var(--color-accent);color:var(--color-bg);border-color:transparent"
-          : "border-color:var(--color-divider);background:var(--color-bg)",
-      })),
-    };
-  }
-}
-</script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>

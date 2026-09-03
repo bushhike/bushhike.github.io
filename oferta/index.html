@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Oferta — bushhike</title>
+<meta name="description" content="Oferta bushhike: wycieczki przewodnickie po Beskidach, warsztaty i zajęcia jogi oraz kilkudniowe wyjazdy łączące góry z praktyką jogi.">
+<link rel="canonical" href="https://bushhike.pl/oferta/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Oferta — bushhike">
+<meta property="og:description" content="Wycieczki przewodnickie po Beskidach, warsztaty jogi i wyjazdy góry + yoga.">
+<meta property="og:url" content="https://bushhike.pl/oferta/">
+<meta property="og:image" content="https://bushhike.pl/img/p1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>Oferta — bushhike</title>
-</helmet>
-<dc-import name="Nav" active="oferta" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/">Trasy</a>
+      <a href="/oferta/" aria-current="page">Oferta</a>
+      <a href="/wyjazdy/">Wyjazdy</a>
+      <a href="/o-nas/">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
   <header style="max-width:46ch;padding:var(--space-8) 0 var(--space-6)">
-    <h6 style="color:var(--color-neutral-700)">Oferta</h6>
+    <p class="kicker">Oferta</p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Co możemy dla Was zrobić</h1>
-    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Wycieczki z przewodnikiem, warsztaty jogi i wyjazdy, w których jedno łączy się z drugim. Termin i program zawsze dogadujemy pod grupę.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Wycieczki z przewodnikiem, warsztaty jogi i wyjazdy, w których jedno łączy się z drugim. Termin i program zawsze dogadujemy pod grupę.</p>
   </header>
 
   <section id="przewodnik" class="split" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
     <div>
-      <h6 style="color:var(--color-neutral-700)">01 · Karol</h6>
+      <p class="kicker">01 · Karol</p>
       <h2 style="font-size:clamp(28px,3.4vw,40px)">Wycieczki przewodnickie po Beskidach</h2>
-      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Prowadzę po całym obszarze uprawnień przewodnika beskidzkiego: Beskid Śląski i Żywiecki, Gorce, Pieniny, Bieszczady, Beskid Niski i Sądecki. Trasę dobieram do tempa grupy, a nie odwrotnie.</p>
+      <p style="color:var(--color-neutral-700);max-width:50ch;text-wrap:pretty">Prowadzę po całym obszarze uprawnień przewodnika beskidzkiego: Beskid Śląski i Żywiecki, Gorce, Pieniny, Bieszczady, Beskid Niski i Sądecki. Trasę dobieram do tempa grupy, a nie odwrotnie.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
         <div class="card">
           <div class="card-title">Jednodniówka</div>
@@ -51,10 +77,10 @@
     </div>
     <div style="display:flex;flex-direction:column;gap:var(--space-3)">
       <div style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/p1.jpg" alt="Grupa na szlaku" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/p1.jpg" alt="Grupa na szlaku" width="1280" height="720" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/p2.jpg" alt="Grupa w lesie" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/p2.jpg" alt="Grupa w lesie" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
   </section>
@@ -62,16 +88,16 @@
   <section id="yoga" class="split-rev" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
     <div style="display:flex;flex-direction:column;gap:var(--space-3)">
       <div style="aspect-ratio:4/5;overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/y8.jpg" alt="Kasia na macie" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y8.jpg" alt="Kasia na macie" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/y10.jpg" alt="Warsztaty jogi" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y10.jpg" alt="Warsztaty jogi" width="1280" height="854" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
     <div>
-      <h6 style="color:var(--color-neutral-700)">02 · Kasia</h6>
+      <p class="kicker">02 · Kasia</p>
       <h2 style="font-size:clamp(28px,3.4vw,40px)">Warsztaty i zajęcia jogi</h2>
-      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Prowadzę praktykę spokojną i uważną — bez pośpiechu i bez wyścigu na najładniejszą pozycję. Pracuję z osobami, które zaczynają, i z tymi, które chcą wejść głębiej w konkretny temat.</p>
+      <p style="color:var(--color-neutral-700);max-width:50ch;text-wrap:pretty">Prowadzę praktykę spokojną i uważną — bez pośpiechu i bez wyścigu na najładniejszą pozycję. Pracuję z osobami, które zaczynają, i z tymi, które chcą wejść głębiej w konkretny temat.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
         <div class="card">
           <div class="card-title">Warsztaty tematyczne</div>
@@ -98,9 +124,9 @@
 
   <section id="wyjazdy" class="split" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
     <div>
-      <h6 style="color:var(--color-neutral-700)">03 · Razem</h6>
+      <p class="kicker">03 · Razem</p>
       <h2 style="font-size:clamp(28px,3.4vw,40px)">Wyjazdy góry + yoga</h2>
-      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Kilka dni w jednym miejscu: rano praktyka, w dzień szlak z przewodnikiem, wieczorem rozciąganie tego, co dzień zmęczył. Te wyjazdy organizujemy z wyprzedzeniem — terminy ogłaszamy kilka miesięcy wcześniej, a zapisy prowadzimy do wyczerpania miejsc. Jeździmy w Pieniny, Bieszczady i na Słowację.</p>
+      <p style="color:var(--color-neutral-700);max-width:50ch;text-wrap:pretty">Kilka dni w jednym miejscu: rano praktyka, w dzień szlak z przewodnikiem, wieczorem rozciąganie tego, co dzień zmęczył. Te wyjazdy organizujemy z wyprzedzeniem — terminy ogłaszamy kilka miesięcy wcześniej, a zapisy prowadzimy do wyczerpania miejsc. Jeździmy w Pieniny, Bieszczady i na Słowację.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
         <div class="card">
           <div class="card-title">Poranna praktyka</div>
@@ -126,17 +152,36 @@
     </div>
     <div style="display:flex;flex-direction:column;gap:var(--space-3)">
       <div style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/y6.jpg" alt="Poranna praktyka na wyjeździe" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/y6.jpg" alt="Poranna praktyka na wyjeździe" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-        <img class="washed" src="img/g9.jpg" alt="Dzień na szlaku" style="width:100%;height:100%;object-fit:cover">
+        <img class="washed" src="/img/g9.jpg" alt="Dzień na szlaku" width="960" height="1280" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
   </section>
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}"></script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>

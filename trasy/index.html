@@ -1,170 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="utf-8">
-<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Pomysły na trasy — bushhike</title>
+<meta name="description" content="Wyszukiwarka tras górskich bushhike — wszystkie trasy z naszego Instagrama w jednym miejscu, z filtrem po paśmie i linkiem do nagrania.">
+<link rel="canonical" href="https://bushhike.pl/trasy/">
+<meta name="theme-color" content="#fcfcfb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="bushhike">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Pomysły na trasy — bushhike">
+<meta property="og:description" content="Wszystkie trasy z naszego Instagrama w jednym miejscu, z filtrem po paśmie.">
+<meta property="og:url" content="https://bushhike.pl/trasy/">
+<meta property="og:image" content="https://bushhike.pl/img/g4.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://docs.google.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="styles.css">
-<title>Pomysły na trasy — bushhike</title>
-</helmet>
-<dc-import name="Nav" active="trasy" hint-size="100%,90px"></dc-import>
+<a href="#main" class="skip-link">Przejdź do treści</a>
+<div class="site-nav-wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="site-nav-brand" href="/">bushhike</a>
+    <button type="button" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav-burger" aria-hidden="true"></span>
+    </button>
+    <div class="site-nav-links" id="site-nav-links">
+      <a href="/trasy/" aria-current="page">Trasy</a>
+      <a href="/oferta/">Oferta</a>
+      <a href="/wyjazdy/">Wyjazdy</a>
+      <a href="/o-nas/">O nas</a>
+    </div>
+    <a class="btn btn-primary site-nav-cta" href="/kontakt/">Kontakt</a>
+  </nav>
+</div>
 
-<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+<main id="main" style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
   <header style="max-width:44ch;padding:var(--space-8) 0 var(--space-6)">
-    <h6 style="color:var(--color-neutral-700)">Wyszukiwarka</h6>
+    <p class="kicker">Wyszukiwarka</p>
     <h1 style="font-size:clamp(38px,5vw,58px)">Pomysły na trasy</h1>
-    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Wszystkie trasy, które pokazaliśmy na Instagramie, w jednym miejscu. Wpisz nazwę albo wybierz pasmo — karta zabierze Cię prosto do rolki.</p>
+    <p style="font-size:17px;color:var(--color-neutral-700);text-wrap:pretty">Wszystkie trasy, które pokazaliśmy na Instagramie, w jednym miejscu. Wpisz nazwę albo wybierz pasmo — karta zabierze Cię prosto do rolki.</p>
   </header>
 
   <div style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-6)">
     <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap">
-      <input class="input" type="search" value="{{ query }}" onChange="{{ onQuery }}" placeholder="Szukaj: Rysy, wąwóz, via ferrata…" style="max-width:420px;min-height:48px;font-size:16px">
-      <span style="font-size:13px;opacity:0.6">{{ countLabel }}</span>
+      <label for="trasy-search" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Szukaj trasy</label>
+      <input class="input" type="search" id="trasy-search" placeholder="Szukaj: Rysy, wąwóz, via ferrata…" style="max-width:420px;min-height:48px;font-size:16px">
+      <span id="trasy-count" style="font-size:13px;color:var(--color-neutral-600)"></span>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)">
-      <sc-for list="{{ regions }}" as="r" hint-placeholder-count="7">
-        <button class="btn" onClick="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button>
-      </sc-for>
-    </div>
+    <div id="trasy-regions" style="display:flex;flex-wrap:wrap;gap:var(--space-2)"></div>
   </div>
 
-  <div class="tiles" style="padding-bottom:var(--space-8)">
-    <sc-for list="{{ shown }}" as="t" hint-placeholder-count="8">
-      <a href="{{ t.reel }}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:var(--space-3);text-decoration:none;color:inherit">
-        <div style="position:relative;aspect-ratio:9/13;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
-          <img class="washed" src="{{ t.img }}" alt="" style="width:100%;height:100%;object-fit:cover">
-          <span style="position:absolute;left:0;top:0;background:var(--color-accent);color:var(--color-text);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 10px">{{ t.region }}</span>
-          <span style="position:absolute;right:10px;bottom:10px;width:32px;height:32px;background:var(--color-bg);display:grid;place-items:center;color:var(--color-text);font-size:12px">▶</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <div style="font-family:var(--font-heading);font-weight:700;letter-spacing:-0.02em;font-size:19px;line-height:1.15;text-wrap:pretty">{{ t.name }}</div>
-          <div style="font-size:13px;opacity:0.65">{{ t.meta }}</div>
-        </div>
-      </a>
-    </sc-for>
+  <div class="tiles" id="trasy-list" style="padding-bottom:var(--space-8)">
+    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
+      <div class="trasa-card__img">
+        <img src="/img/g8-sm.jpg" alt="Zbójnicka Chata" width="420" height="280" decoding="async">
+        <span class="trasa-card__region">Tatry</span>
+        <span class="trasa-card__play" aria-hidden="true">▶</span>
+      </div>
+      <div class="trasa-card__name">Zbójnicka Chata</div>
+      <div class="trasa-card__meta">5 h · 12 km</div>
+    </a>
+    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
+      <div class="trasa-card__img">
+        <img src="/img/g9-sm.jpg" alt="Grań Rohaczy" width="420" height="280" loading="lazy" decoding="async">
+        <span class="trasa-card__region">Tatry</span>
+        <span class="trasa-card__play" aria-hidden="true">▶</span>
+      </div>
+      <div class="trasa-card__name">Grań Rohaczy</div>
+      <div class="trasa-card__meta">6 h · 14 km</div>
+    </a>
+    <a href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener" class="trasa-card">
+      <div class="trasa-card__img">
+        <img src="/img/p2-sm.jpg" alt="Chopok i Dziumbier" width="420" height="236" loading="lazy" decoding="async">
+        <span class="trasa-card__region">Tatry</span>
+        <span class="trasa-card__play" aria-hidden="true">▶</span>
+      </div>
+      <div class="trasa-card__name">Chopok i Dziumbier</div>
+      <div class="trasa-card__meta">4 h · 11 km</div>
+    </a>
   </div>
 
-  <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
-    <div style="padding:var(--space-8) 0 var(--space-8);text-align:left;max-width:40ch">
-      <h3>Nic takiego jeszcze nie mamy</h3>
-      <p style="opacity:0.75">Spróbuj krótszego hasła albo napisz do nas — chętnie podpowiemy trasę poza listą.</p>
-      <a class="btn btn-secondary" href="/kontakt/">Napisz do nas</a>
-    </div>
-  </sc-if>
+  <div id="trasy-empty" hidden style="padding:var(--space-8) 0;max-width:40ch">
+    <h2>Nic takiego jeszcze nie mamy</h2>
+    <p style="color:var(--color-neutral-700)">Spróbuj krótszego hasła albo napisz do nas — chętnie podpowiemy trasę poza listą.</p>
+    <a class="btn btn-secondary" href="/kontakt/">Napisz do nas</a>
+  </div>
 </main>
 
-<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{}">
-const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTDzGqu23B8c8HJsILIcILdcmuW-JWGvkN7w9JtDwXOde2zD1gbzxweHx1KGimxKMhgsgZutKhBx8qd/pub?output=csv";
-
-// Zapas — pokazywany, gdy arkusz jest chwilowo niedostępny.
-const FALLBACK = [
-  { nazwa: "Zbójnicka Chata", pasmo: "Tatry", czas: "5 h", dlugosc_km: "12", zdjecie: "img/g8.jpg", link_do_rolki: "https://www.instagram.com/bushhike/", pokazuj: "tak" },
-  { nazwa: "Grań Rohaczy", pasmo: "Tatry", czas: "6 h", dlugosc_km: "14", zdjecie: "img/g9.jpg", link_do_rolki: "https://www.instagram.com/bushhike/", pokazuj: "tak" },
-  { nazwa: "Chopok i Dziumbier", pasmo: "Tatry", czas: "4 h", dlugosc_km: "11", zdjecie: "img/p2.jpg", link_do_rolki: "https://www.instagram.com/bushhike/", pokazuj: "tak" },
-];
-
-function parseCSV(text) {
-  const rows = [];
-  let row = [], cell = "", q = false;
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (q) {
-      if (c === '"' && text[i + 1] === '"') { cell += '"'; i++; }
-      else if (c === '"') q = false;
-      else cell += c;
-    } else if (c === '"') q = true;
-    else if (c === ",") { row.push(cell); cell = ""; }
-    else if (c === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; }
-    else if (c !== "\r") cell += c;
-  }
-  if (cell !== "" || row.length) { row.push(cell); rows.push(row); }
-  if (!rows.length) return [];
-  const head = rows[0].map((h) => h.trim().toLowerCase());
-  return rows.slice(1)
-    .filter((r) => r.some((v) => v.trim() !== ""))
-    .map((r) => {
-      const o = {};
-      head.forEach((h, i) => { o[h] = (r[i] || "").trim(); });
-      return o;
-    });
-}
-
-const norm = (s) => s.toLowerCase()
-  .replace(/ą/g, "a").replace(/ć/g, "c").replace(/ę/g, "e").replace(/ł/g, "l")
-  .replace(/ń/g, "n").replace(/ó/g, "o").replace(/ś/g, "s").replace(/ź/g, "z").replace(/ż/g, "z");
-
-const REGION_ORDER = ["Tatry", "Pieniny", "Bieszczady", "Gorce", "Beskid Żywiecki", "Beskid Sądecki", "Beskid Niski", "Słowacja", "Poza Europą"];
-
-class Component extends DCLogic {
-  state = { query: "", region: "Wszystkie", rows: FALLBACK };
-
-  componentDidMount() {
-    fetch(SHEET_CSV, { cache: "no-store" })
-      .then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
-      .then((t) => {
-        const rows = parseCSV(t).filter((r) => r.nazwa);
-        if (rows.length) this.setState({ rows });
-      })
-      .catch(() => {});
-  }
-
-  renderVals() {
-    const visible = this.state.rows.filter((r) => {
-      const p = (r.pokazuj || "tak").toLowerCase();
-      return p !== "nie" && p !== "no" && p !== "false" && p !== "0";
-    });
-
-    const q = norm(this.state.query.trim());
-    const reg = this.state.region;
-
-    const shown = visible.filter((r) => {
-      if (reg !== "Wszystkie" && (r.pasmo || "") !== reg) return false;
-      if (!q) return true;
-      return norm([r.nazwa, r.pasmo, r.czas, r.dlugosc_km].join(" ")).includes(q);
-    }).map((r, i) => ({
-      key: i,
-      name: r.nazwa,
-      region: r.pasmo || "",
-      img: r.zdjecie || "img/g5.jpg",
-      reel: r.link_do_rolki || "https://www.instagram.com/bushhike/",
-      meta: [r.czas, r.dlugosc_km ? r.dlugosc_km + " km" : ""].filter(Boolean).join(" · "),
-    }));
-
-    const present = [];
-    visible.forEach((r) => { if (r.pasmo && !present.includes(r.pasmo)) present.push(r.pasmo); });
-    present.sort((a, b) => {
-      const ia = REGION_ORDER.indexOf(a), ib = REGION_ORDER.indexOf(b);
-      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b, "pl");
-    });
-
-    const regions = ["Wszystkie"].concat(present).map((label) => {
-      const on = label === reg;
-      return {
-        label,
-        onClick: () => this.setState({ region: label }),
-        style: on
-          ? "background:var(--color-accent);color:var(--color-bg);border-color:transparent"
-          : "border-color:var(--color-divider)",
-      };
-    });
-
-    const n = shown.length;
-    return {
-      shown, regions,
-      query: this.state.query,
-      onQuery: (e) => this.setState({ query: e.target.value }),
-      countLabel: n === 1 ? "1 trasa" : n >= 2 && n <= 4 ? n + " trasy" : n + " tras",
-      empty: n === 0,
-    };
-  }
-}
-</script>
+<footer style="border-top:1px solid var(--color-text);margin-top:var(--space-8)">
+  <div style="max-width:1180px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:24px;letter-spacing:0.02em;text-transform:uppercase">bushhike</div>
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-700);max-width:26ch">Karol i Kasia. Góry, chodzenie i mata na trawie.</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px" aria-label="Stopka">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Strona</h2>
+      <a class="footer-link" href="/trasy/">Pomysły na trasy</a>
+      <a class="footer-link" href="/oferta/">Oferta</a>
+      <a class="footer-link" href="/wyjazdy/">Wyjazdy</a>
+      <a class="footer-link" href="/o-nas/">O nas</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:14px">
+      <h2 style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-700);margin:0 0 var(--space-1)">Kontakt</h2>
+      <a class="footer-link" href="mailto:bushhike.contact@gmail.com">bushhike.contact@gmail.com</a>
+      <a class="footer-link" href="tel:+48790858578">+48 790 858 578</a>
+      <a class="footer-link" href="https://www.instagram.com/bushhike/" target="_blank" rel="noopener">Instagram @bushhike</a>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 var(--space-6) var(--space-6);font-size:12px;color:var(--color-neutral-600)">© 2026 bushhike</div>
+</footer>
 </body>
 </html>
