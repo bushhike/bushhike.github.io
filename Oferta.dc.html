@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="styles.css">
+<title>Oferta — bushhike</title>
+</helmet>
+<dc-import name="Nav" active="oferta" hint-size="100%,90px"></dc-import>
+
+<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+  <header style="max-width:46ch;padding:var(--space-8) 0 var(--space-6)">
+    <h6 style="color:var(--color-neutral-700)">Oferta</h6>
+    <h1 style="font-size:clamp(38px,5vw,58px)">Co możemy dla Was zrobić</h1>
+    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Wycieczki z przewodnikiem, warsztaty jogi i wyjazdy, w których jedno łączy się z drugim. Termin i program zawsze dogadujemy pod grupę.</p>
+  </header>
+
+  <section id="przewodnik" class="split" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
+    <div>
+      <h6 style="color:var(--color-neutral-700)">01 · Karol</h6>
+      <h2 style="font-size:clamp(28px,3.4vw,40px)">Wycieczki przewodnickie po Beskidach</h2>
+      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Prowadzę po całym obszarze uprawnień przewodnika beskidzkiego: Beskid Śląski i Żywiecki, Gorce, Pieniny, Bieszczady, Beskid Niski i Sądecki. Trasę dobieram do tempa grupy, a nie odwrotnie.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
+        <div class="card">
+          <div class="card-title">Jednodniówka</div>
+          <p class="card-body">Jedno wyjście, 4–8 godzin na szlaku, dojazd własny lub wspólny.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Weekend</div>
+          <p class="card-body">Dwa dni z noclegiem w schronisku albo na kwaterze.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Grupy zamknięte</div>
+          <p class="card-body">Firmy, szkoły, urodziny, integracje. Program pod cel wyjazdu.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Zima</div>
+          <p class="card-body">Rakiety śnieżne i trasy dobrane do warunków.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-6)">
+        <a class="btn btn-primary" href="Kontakt.dc.html">Zapytaj o termin</a>
+        <a class="btn btn-secondary" href="Trasy.dc.html">Pomysły na trasy</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+      <div style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/p1.jpg" alt="Grupa na szlaku" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/p2.jpg" alt="Grupa w lesie" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </section>
+
+  <section id="yoga" class="split-rev" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+      <div style="aspect-ratio:4/5;overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/y8.jpg" alt="Kasia na macie" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/y10.jpg" alt="Warsztaty jogi" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+    <div>
+      <h6 style="color:var(--color-neutral-700)">02 · Kasia</h6>
+      <h2 style="font-size:clamp(28px,3.4vw,40px)">Warsztaty i zajęcia jogi</h2>
+      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Prowadzę praktykę spokojną i uważną — bez pośpiechu i bez wyścigu na najładniejszą pozycję. Pracuję z osobami, które zaczynają, i z tymi, które chcą wejść głębiej w konkretny temat.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
+        <div class="card">
+          <div class="card-title">Warsztaty tematyczne</div>
+          <p class="card-body">Dwie–trzy godziny wokół jednego zagadnienia: kręgosłup, oddech, wygięcia, szpagat.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Imprezy okolicznościowe</div>
+          <p class="card-body">Wieczory panieńskie, urodziny, spotkania firmowe. Przychodzę z matami.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Zajęcia regularne</div>
+          <p class="card-body">Cykl dla stałej grupy — w sali albo, gdy pogoda pozwala, na trawie.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Joga w plenerze</div>
+          <p class="card-body">Poranna praktyka na hali albo nad stawem, jako część górskiego dnia.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-6)">
+        <a class="btn btn-primary" href="Kontakt.dc.html">Zapytaj o warsztat</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="wyjazdy" class="split" style="align-items:start;padding:var(--space-8) 0;border-top:1px solid var(--color-divider)">
+    <div>
+      <h6 style="color:var(--color-neutral-700)">03 · Razem</h6>
+      <h2 style="font-size:clamp(28px,3.4vw,40px)">Wyjazdy góry + yoga</h2>
+      <p style="opacity:0.85;max-width:50ch;text-wrap:pretty">Kilka dni w jednym miejscu: rano praktyka, w dzień szlak z przewodnikiem, wieczorem rozciąganie tego, co dzień zmęczył. Te wyjazdy organizujemy z wyprzedzeniem — terminy ogłaszamy kilka miesięcy wcześniej, a zapisy prowadzimy do wyczerpania miejsc. Jeździmy w Pieniny, Bieszczady i na Słowację.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-3);padding-top:var(--space-4)">
+        <div class="card">
+          <div class="card-title">Poranna praktyka</div>
+          <p class="card-body">Godzina na macie, zanim zrobi się gorąco.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Dzień na szlaku</div>
+          <p class="card-body">Trasa dobrana do grupy, z przewodnikiem i bez pośpiechu.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Wieczorne rozciąganie</div>
+          <p class="card-body">Krótka sesja regeneracyjna, a potem wspólna kolacja.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Nocleg i wyżywienie</div>
+          <p class="card-body">Jedna baza na cały wyjazd, pokoje 2–3-osobowe, wyżywienie w cenie.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-6)">
+        <a class="btn btn-primary" href="Wyjazdy.dc.html">Najbliższe wyjazdy</a>
+        <a class="btn btn-secondary" href="Kontakt.dc.html">Zapytaj o termin</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+      <div style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/y6.jpg" alt="Poranna praktyka na wyjeździe" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+        <img class="washed" src="img/g9.jpg" alt="Dzień na szlaku" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </section>
+</main>
+
+<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

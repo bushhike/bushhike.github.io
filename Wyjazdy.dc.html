@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="styles.css">
+<title>Wyjazdy — bushhike</title>
+</helmet>
+<dc-import name="Nav" active="wyjazdy" hint-size="100%,90px"></dc-import>
+
+<main style="max-width:1180px;margin:0 auto;padding:0 var(--space-6)">
+  <header style="max-width:46ch;padding:var(--space-8) 0 var(--space-6)">
+    <h6 style="color:var(--color-neutral-700)">Wyjazdy</h6>
+    <h1 style="font-size:clamp(38px,5vw,58px)">Najbliższe terminy</h1>
+    <p style="font-size:17px;opacity:0.8;text-wrap:pretty">Wyjazdy prowadzimy w małych grupach. Kiedy miejsca się skończą, zapisujemy na listę rezerwową i przy najbliższej okazji dajemy znać.</p>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:var(--space-6);padding-bottom:var(--space-8)">
+
+    <article class="split-rev" style="gap:var(--space-6);border-top:2px solid var(--color-text);padding-top:var(--space-4)">
+      <div style="min-height:280px;background:var(--color-neutral-300)">
+        <img class="washed" src="img/g8.jpg" alt="Pieniny" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="padding:var(--space-2) 0 var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);justify-content:center">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag tag-accent">Zapisy otwarte</span>
+          <span class="tag tag-neutral">2–4 października 2026</span>
+          <span class="tag tag-accent-2">z PTTK Tarnów</span>
+        </div>
+        <h2 style="font-size:clamp(26px,3vw,36px);margin:0">Joga i jesienne Pieniny</h2>
+        <p style="margin:0;opacity:0.85;max-width:44ch;text-wrap:pretty">Trzy dni na pienińskich szlakach: Wysoki Wierch, Wysoka z Wąwozem Homole i Trzy Korony, wieczorne sesje jogi i poranna praktyka na koniec.</p>
+        <div style="display:flex;align-items:baseline;gap:var(--space-3);padding-top:var(--space-2)">
+          <span style="font-family:var(--font-heading);font-weight:800;letter-spacing:-0.03em;font-size:30px">750–850 zł</span>
+          <span style="font-size:13px;opacity:0.65">przejazd, nocleg i wyżywienie w cenie</span>
+        </div>
+        <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-2)">
+          <a class="btn btn-primary" href="Wyjazd-Pieniny.dc.html">Program i zapisy</a>
+        </div>
+      </div>
+    </article>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-4)">
+      <article class="card" aria-hidden="true" style="padding:0;overflow:hidden;pointer-events:none;user-select:none;background:var(--color-neutral-200);border-color:var(--color-neutral-300);min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);text-align:center">
+        <span class="tag tag-neutral" style="opacity:0.7">Termin w przygotowaniu</span>
+        <div class="card-title" style="font-size:20px;color:var(--color-neutral-600)">Kolejny wyjazd wkrótce</div>
+        <p class="card-body" style="max-width:26ch;color:var(--color-neutral-600);margin:0">Szczegóły podamy, gdy ustalimy termin.</p>
+      </article>
+      <article class="card" aria-hidden="true" style="padding:0;overflow:hidden;pointer-events:none;user-select:none;background:var(--color-neutral-200);border-color:var(--color-neutral-300);min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);text-align:center">
+        <span class="tag tag-neutral" style="opacity:0.7">Termin w przygotowaniu</span>
+        <div class="card-title" style="font-size:20px;color:var(--color-neutral-600)">Kolejny wyjazd wkrótce</div>
+        <p class="card-body" style="max-width:26ch;color:var(--color-neutral-600);margin:0">Szczegóły podamy, gdy ustalimy termin.</p>
+      </article>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--color-divider);padding:var(--space-8) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-6);align-items:center">
+    <div style="max-width:36ch">
+      <h2 style="font-size:clamp(26px,3vw,34px)">Chcecie własny termin?</h2>
+      <p style="opacity:0.8;text-wrap:pretty">Każdy z tych wyjazdów robimy też dla grup zamkniętych — od sześciu osób w górę, w terminie, który Wam pasuje.</p>
+      <a class="btn btn-primary" href="Kontakt.dc.html">Napisz do nas</a>
+    </div>
+    <div style="aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300)">
+      <img class="washed" src="img/g5.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+    </div>
+  </section>
+</main>
+
+<dc-import name="Stopka" hint-size="100%,340px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>
